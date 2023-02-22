@@ -30,8 +30,9 @@ jobs:
           python-version: 'pypy3.9'
           
       - name: create virtualenv and activate virtualenv
-        run:
+        run: |
           pip install virtualenv
           virtual env
           source env/bin/activate
           pip install -r requeriments.txt
+          pytest
